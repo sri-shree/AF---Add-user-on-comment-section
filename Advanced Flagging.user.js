@@ -2735,15 +2735,11 @@ and limitations under the License.
                             Id: 5,
                             DisplayName: 'Link Only',
                             ReportType: 'AnswerNotAnAnswer',
-                            GetComment: function (userDetails) { return  userDetails.Reputation == 1  ?'Welcome to StackOverflow '+ userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +'. Link to a solution is welcome, but please ensure your answer is useful without it: ' +
-                                '[add context around the link](//meta.stackexchange.com/a/8259) so your fellow users will ' +
-                                'have some idea what it is and why it’s there, then quote the most relevant part of the ' +
-                                'page you\'re linking to in case the target page is unavailable. ' +
+                            GetComment: function (userDetails) { return  userDetails.Reputation == 1  ?'Welcome to StackOverflow '+ userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +
+                                '. While this link may answer the question, it is better to include the essential parts of the answer here and provide the link for reference. ' +
                                 '[Answers that are little more than a link may be deleted.](//stackoverflow.com/help/deleted-answers)'
-                            : userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +', link to a solution is welcome, but please ensure your answer is useful without it: ' +
-                                '[add context around the link](//meta.stackexchange.com/a/8259) so your fellow users will ' +
-                                'have some idea what it is and why it’s there, then quote the most relevant part of the ' +
-                                'page you\'re linking to in case the target page is unavailable. ' +
+                            : userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +
+                                ', while this link may answer the question, it is better to include the essential parts of the answer here and provide the link for reference. ' +
                                 '[Answers that are little more than a link may be deleted.](//stackoverflow.com/help/deleted-answers)'; }
                         },
                         {
@@ -2779,7 +2775,7 @@ and limitations under the License.
                                 'will see a higher vote count on that answer, and the answerer will also be rewarded with reputation points. ' +
                                 'See [Why is voting important](http://stackoverflow.com/help/why-vote).'
                             :
-                            userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) + 'please don\'t add _"thanks"_ as answers. They don\'t actually provide an answer to the question, ' +
+                            userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) + ', please don\'t add _"thanks"_ as answers. They don\'t actually provide an answer to the question, ' +
                                 'and can be perceived as noise by its future visitors. ' +
                                 'Instead, [upvote answers](http://stackoverflow.com/help/privileges/vote-up) you like. This way future visitors of the question ' +
                                 'will see a higher vote count on that answer, and the answerer will also be rewarded with reputation points. ' +
@@ -2812,13 +2808,14 @@ and limitations under the License.
                             Id: 14,
                             DisplayName: 'Duplicate',
                             ReportType: 'AnswerNotAnAnswer',
-                            GetComment: function (userDetails) { return userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) + ', instead of posting an answer which merely links to another answer, please instead [flag the question](https://stackoverflow.com/help/privileges/flag-posts) as a duplicate.'; }
+                            GetComment: function (userDetails) { return userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +
+                                ', instead of posting an answer which merely links to another answer, please instead [flag the question](https://stackoverflow.com/help/privileges/flag-posts) as a duplicate.'; }
                         },
                         {
                             Id: 17,
                             DisplayName: 'Non English',
                             ReportType: 'AnswerNotAnAnswer',
-                            GetComment: function (userDetails) { return  'Welcome to Stack Overflow'+userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +'. Please write your answer in English, as Stack Overflow is an [English only site](https://meta.stackoverflow.com/a/297680).'; }
+                            GetComment: function (userDetails) { return  'Welcome to Stack Overflow '+userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +'. Please write your answer in English, as Stack Overflow is an [English only site](https://meta.stackoverflow.com/a/297680).'; }
                         }
                     ]
                 },

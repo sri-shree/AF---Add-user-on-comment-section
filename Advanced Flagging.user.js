@@ -2779,7 +2779,7 @@ and limitations under the License.
                                 'will see a higher vote count on that answer, and the answerer will also be rewarded with reputation points. ' +
                                 'See [Why is voting important](http://stackoverflow.com/help/why-vote).'
                             :
-                            userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) + 'please don\'t add _"thanks"_ as answers. They don\'t actually provide an answer to the question, ' +
+                            userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) + ', please don\'t add _"thanks"_ as answers. They don\'t actually provide an answer to the question, ' +
                                 'and can be perceived as noise by its future visitors. ' +
                                 'Instead, [upvote answers](http://stackoverflow.com/help/privileges/vote-up) you like. This way future visitors of the question ' +
                                 'will see a higher vote count on that answer, and the answerer will also be rewarded with reputation points. ' +
@@ -2812,13 +2812,14 @@ and limitations under the License.
                             Id: 14,
                             DisplayName: 'Duplicate',
                             ReportType: 'AnswerNotAnAnswer',
-                            GetComment: function (userDetails) { return userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) + ', instead of posting an answer which merely links to another answer, please instead [flag the question](https://stackoverflow.com/help/privileges/flag-posts) as a duplicate.'; }
+                            GetComment: function (userDetails) { return userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +
+                                ', instead of posting an answer which merely links to another answer, please instead [flag the question](https://stackoverflow.com/help/privileges/flag-posts) as a duplicate.'; }
                         },
                         {
                             Id: 17,
                             DisplayName: 'Non English',
                             ReportType: 'AnswerNotAnAnswer',
-                            GetComment: function (userDetails) { return  'Welcome to Stack Overflow'+userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +'. Please write your answer in English, as Stack Overflow is an [English only site](https://meta.stackoverflow.com/a/297680).'; }
+                            GetComment: function (userDetails) { return  'Welcome to Stack Overflow '+userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +'. Please write your answer in English, as Stack Overflow is an [English only site](https://meta.stackoverflow.com/a/297680).'; }
                         }
                     ]
                 },

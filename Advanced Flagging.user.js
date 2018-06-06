@@ -2770,16 +2770,16 @@ and limitations under the License.
                             GetComment: function (userDetails) { return userDetails.Reputation < 15
                                 ? userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) + ', please don\'t add _"thanks"_ as answers. They don\'t actually provide an answer to the question, ' +
                                 'and can be perceived as noise by its future visitors. Once you [earn](http://meta.stackoverflow.com/q/146472) ' +
-                                'enough [reputation](http://stackoverflow.com/help/whats-reputation), you will gain privileges to ' +
-                                '[upvote answers](http://stackoverflow.com/help/privileges/vote-up) you like. This way future visitors of the question ' +
+                                'enough [reputation](stackoverflow.com/help/whats-reputation), you will gain privileges to ' +
+                                '[upvote answers](stackoverflow.com/help/privileges/vote-up) you like. This way future visitors of the question ' +
                                 'will see a higher vote count on that answer, and the answerer will also be rewarded with reputation points. ' +
                                 'See [Why is voting important](http://stackoverflow.com/help/why-vote).'
                             :
                             userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) + ', please don\'t add _"thanks"_ as answers. They don\'t actually provide an answer to the question, ' +
                                 'and can be perceived as noise by its future visitors. ' +
-                                'Instead, [upvote answers](http://stackoverflow.com/help/privileges/vote-up) you like. This way future visitors of the question ' +
+                                'Instead, [upvote answers](stackoverflow.com/help/privileges/vote-up) you like. This way future visitors of the question ' +
                                 'will see a higher vote count on that answer, and the answerer will also be rewarded with reputation points. ' +
-                                'See [Why is voting important](http://stackoverflow.com/help/why-vote).'; }
+                                'See [Why is voting important](//stackoverflow.com/help/why-vote).'; }
                         },
                         {
                             Id: 8,
@@ -2815,7 +2815,8 @@ and limitations under the License.
                             Id: 17,
                             DisplayName: 'Non English',
                             ReportType: 'AnswerNotAnAnswer',
-                            GetComment: function (userDetails) { return  'Welcome to Stack Overflow '+userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +'. Please write your answer in English, as Stack Overflow is an [English only site](https://meta.stackoverflow.com/a/297680).'; }
+                            GetComment: function (userDetails) { return  userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +
+                                ', please write your answer in English, as Stack Overflow is an [English only site](https://meta.stackoverflow.com/a/297680).'; }
                         }
                     ]
                 },

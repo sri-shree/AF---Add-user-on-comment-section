@@ -2768,14 +2768,15 @@ and limitations under the License.
                             DisplayName: 'Thanks',
                             ReportType: 'AnswerNotAnAnswer',
                             GetComment: function (userDetails) { return userDetails.Reputation < 15
-                                ? userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) + ', please don\'t add _"thanks"_ as answers. They don\'t actually provide an answer to the question, ' +
+                                ? userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +
+                                ', please don\'t add _"thanks"_ as answers. They don\'t actually provide an answer to the question, ' +
                                 'and can be perceived as noise by its future visitors. Once you [earn](http://meta.stackoverflow.com/q/146472) ' +
                                 'enough [reputation](stackoverflow.com/help/whats-reputation), you will gain privileges to ' +
                                 '[upvote answers](stackoverflow.com/help/privileges/vote-up) you like. This way future visitors of the question ' +
                                 'will see a higher vote count on that answer, and the answerer will also be rewarded with reputation points. ' +
-                                'See [Why is voting important](http://stackoverflow.com/help/why-vote).'
-                            :
-                            userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) + ', please don\'t add _"thanks"_ as answers. They don\'t actually provide an answer to the question, ' +
+                                'See [Why is voting important](//stackoverflow.com/help/why-vote).'
+                                : userDetails.AuthorName.split(' ')[0].charAt(0).toUpperCase() + userDetails.AuthorName.split(' ')[0].slice(1) +
+                                ', please don\'t add _"thanks"_ as answers. They don\'t actually provide an answer to the question, ' +
                                 'and can be perceived as noise by its future visitors. ' +
                                 'Instead, [upvote answers](stackoverflow.com/help/privileges/vote-up) you like. This way future visitors of the question ' +
                                 'will see a higher vote count on that answer, and the answerer will also be rewarded with reputation points. ' +
